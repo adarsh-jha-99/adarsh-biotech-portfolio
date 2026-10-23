@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adarsh Kumar Jha | B.Tech Biotechnology Portfolio</title>
+  <meta name="description" content="Explore the academic journey, biotechnology interests, skills, projects, and learning journey of Adarsh Kumar Jha, a B.Tech Biotechnology student at Lovely Professional University.">
+  <meta property="og:title" content="Adarsh Kumar Jha | Biotechnology Portfolio">
+  <meta property="og:description" content="Exploring life through biotechnology and innovation.">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --site-primary: #087f65;
+      --site-secondary: #123b43;
+      --site-background: #07151b;
+      --site-on-primary: #ffffff;
+      --site-on-secondary: #f3fffb;
+      --site-on-background: #e9f4f2;
+      --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --site-font-heading: Inter, ui-sans-serif, system-ui, sans-serif;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background: var(--site-background); color: var(--site-on-background); font-family: var(--site-font-body); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+
+    .root { min-height: 100vh; background: var(--site-background); overflow: hidden; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+
+    /* Topbar & Navigation */
+    .topbar { position: sticky; top: 0; z-index: 10; background: rgba(7, 21, 27, 0.88); backdrop-filter: blur(18px); border-bottom: 1px solid #254047; }
+    .nav { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.04em; }
+    .brandmark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(135deg, var(--site-primary), #35c6a5); color: white; font-weight: 900; }
+    .navlinks { display: flex; align-items: center; gap: 22px; font-size: 13px; color: #b7ceca; }
+    .navlinks a:hover, .social a:hover { color: #68e0bd; }
+    .navright { display: flex; align-items: center; gap: 12px; }
+    .iconlink { border: 1px solid #315159; border-radius: 12px; padding: 8px 10px; color: #cce2de; font-size: 13px; background: transparent; cursor: pointer; }
+    .menu-btn { display: none; background: none; color: white; border: 1px solid #315159; border-radius: 10px; padding: 8px 12px; cursor: pointer; }
+
+    /* Hero Section */
+    .hero { position: relative; padding: 100px 0 88px; }
+    .hero:before { content: ""; position: absolute; width: 540px; height: 540px; right: -120px; top: -120px; border-radius: 50%; background: radial-gradient(circle, rgba(16, 155, 119, 0.2), transparent 68%); pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 60px; position: relative; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #7ee4c4; text-transform: uppercase; letter-spacing: 0.15em; font-size: 11px; font-weight: 800; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ce0ae; box-shadow: 0 0 16px #4ce0ae; }
+    .hero h1 { font-family: var(--site-font-heading); font-size: clamp(42px, 6vw, 70px); line-height: 1.04; letter-spacing: -0.065em; margin: 22px 0; }
+    .hero h1 span { color: #62d9b2; }
+    .lead { font-size: 18px; line-height: 1.8; color: #b9cecb; max-width: 630px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0 26px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 12px 18px; border-radius: 12px; border: 1px solid #35535a; font-weight: 750; font-size: 14px; transition: transform 0.2s, background 0.2s; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary { background: var(--site-primary); border-color: var(--site-primary); color: white; }
+    .btn.ghost { background: #10272d; color: #e4f3ef; }
+    .social { display: flex; gap: 18px; color: #91aaa5; font-size: 13px; }
+
+    /* Visual & DNA Animation */
+    .visual { position: relative; min-height: 410px; display: grid; place-items: center; }
+    .orbit { position: absolute; width: 340px; height: 340px; border: 1px solid rgba(85, 211, 177, 0.3); border-radius: 50%; animation: spin 36s linear infinite; }
+    .orbit.two { width: 270px; height: 270px; border-style: dashed; animation-direction: reverse; animation-duration: 45s; }
+    .orbit:before, .orbit:after { content: ""; position: absolute; width: 10px; height: 10px; background: #6de1ba; border-radius: 50%; box-shadow: 0 0 20px #6de1ba; }
+    .orbit:before { top: 25%; left: 4%; }
+    .orbit:after { right: 8%; bottom: 20%; background: #55bfe2; box-shadow: 0 0 20px #55bfe2; }
+    .science-card { position: relative; width: 260px; padding: 24px; border-radius: 24px; border: 1px solid #31575b; background: linear-gradient(145deg, rgba(18, 57, 63, 0.92), rgba(8, 28, 34, 0.96)); box-shadow: 0 30px 80px #02090c; z-index: 1; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; color: #8caeaa; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; }
+    .molecule { height: 190px; position: relative; display: flex; align-items: center; justify-content: center; }
+    .helix { position: relative; width: 110px; height: 170px; }
+    .strand { position: absolute; inset: 0; display: flex; justify-content: space-between; }
+    .strand b { position: absolute; width: 9px; height: 9px; border-radius: 50%; background: #61dfb4; box-shadow: 0 0 13px #35b994; }
+    .strand b:nth-child(1) { top: 2%; left: 15%; }
+    .strand b:nth-child(2) { top: 14%; left: 39%; }
+    .strand b:nth-child(3) { top: 26%; left: 65%; }
+    .strand b:nth-child(4) { top: 38%; left: 80%; }
+    .strand b:nth-child(5) { top: 50%; left: 66%; }
+    .strand b:nth-child(6) { top: 62%; left: 40%; }
+    .strand b:nth-child(7) { top: 74%; left: 15%; }
+    .strand b:nth-child(8) { top: 86%; left: 6%; }
+    .strand.second b { background: #4ab9d7; box-shadow: 0 0 13px #4ab9d7; }
+    .strand.second { transform: scaleX(-1); }
+    .rung { position: absolute; height: 2px; width: 64px; left: 23px; background: linear-gradient(90deg, #61dfb4, #4ab9d7); opacity: 0.65; }
+    .rung:nth-child(2) { top: 24px; }
+    .rung:nth-child(3) { top: 47px; }
+    .rung:nth-child(4) { top: 70px; }
+    .rung:nth-child(5) { top: 93px; }
+    .rung:nth-child(6) { top: 116px; }
+    .rung:nth-child(7) { top: 139px; }
+    .card-foot { display: flex; justify-content: space-between; color: #92b3ad; font-size: 12px; border-top: 1px solid #2a4b50; padding-top: 15px; }
+    .floating { position: absolute; padding: 12px 14px; border: 1px solid #31565a; background: #0d252b; border-radius: 13px; color: #c4e7dc; font-size: 12px; box-shadow: 0 15px 35px #030b0e; }
+    .floating.one { top: 48px; right: -4px; }
+    .floating.two { bottom: 44px; left: -5px; }
+
+    /* Sections */
+    .section { padding: 84px 0; border-top: 1px solid rgba(60, 95, 99, 0.32); }
+    .section-head { max-width: 690px; margin-bottom: 36px; }
+    .kicker { color: #68dcb8; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 800; }
+    .section h2 { font-size: clamp(30px, 4vw, 43px); letter-spacing: -0.045em; line-height: 1.15; margin: 12px 0; }
+    .muted { color: #a8c0bb; }
+
+    /* Grids & Cards */
+    .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 36px; }
+    .panel { padding: 27px; border: 1px solid #29474d; background: linear-gradient(145deg, #0d252b, #0a1d23); border-radius: 20px; }
+    .panel p { margin: 0; color: #b9ceca; }
+    .facts { display: grid; gap: 12px; }
+    .fact { display: flex; gap: 14px; align-items: center; padding: 14px; border: 1px solid #28474c; border-radius: 14px; background: #0b2026; }
+    .fact-icon { display: grid; place-items: center; width: 40px; height: 40px; background: #123e3c; color: #78e2bd; border-radius: 12px; }
+    .fact small { display: block; color: #89aaa4; font-size: 11px; }
+    .fact strong { font-size: 14px; }
+
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .skill-card, .project-card, .interest-card, .timeline-card { border: 1px solid #28474c; background: #0b2026; border-radius: 18px; padding: 22px; }
+    .skill-card h3, .project-card h3, .interest-card h3 { margin: 0 0 12px; font-size: 17px; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 12px; color: #b8d5ce; border: 1px solid #31575b; border-radius: 999px; padding: 6px 10px; background: #102a30; }
+    .skill-note { font-size: 12px; color: #779994; margin-top: 16px; }
+    .project-card { display: flex; flex-direction: column; min-height: 250px; }
+    .project-card .number { font-size: 12px; color: #63d8b1; letter-spacing: 0.15em; }
+    .project-card p { color: #a9c0bc; font-size: 14px; }
+    .project-card .btn { margin-top: auto; align-self: flex-start; padding: 9px 12px; font-size: 12px; }
+
+    .interests { display: flex; flex-wrap: wrap; gap: 12px; }
+    .interest-card { flex: 1 1 180px; max-width: 250px; }
+    .interest-card span { font-size: 24px; color: #68dcb8; display: block; margin-bottom: 14px; }
+
+    .timeline { border-left: 1px solid #32625e; padding-left: 25px; max-width: 760px; }
+    .timeline-card { position: relative; margin-bottom: 18px; }
+    .timeline-card:before { content: ""; position: absolute; width: 9px; height: 9px; left: -31px; top: 28px; border-radius: 50%; background: #60ddb4; box-shadow: 0 0 0 5px #12332f; }
+    .timeline-card h3 { margin: 0 0 5px; }
+    .timeline-card p { margin: 0; color: #a9c0bc; }
+    .empty-state { border: 1px dashed #31565a; padding: 26px; border-radius: 18px; color: #a9c0bc; background: rgba(12, 34, 39, 0.55); }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 24px; }
+    .contact-links { display: grid; gap: 12px; margin-top: 22px; }
+    .contact-links a { border: 1px solid #2d4c51; padding: 13px 15px; border-radius: 12px; color: #c8e0da; }
+    .contact-links a:hover { border-color: #54cda7; }
+    .form { display: grid; gap: 14px; }
+    .form label { font-size: 12px; color: #9db9b2; display: grid; gap: 7px; }
+    .form input, .form textarea { background: #071a20; border: 1px solid #2c4c51; border-radius: 10px; padding: 12px; color: #e8f5f1; outline: none; }
+    .form input:focus, .form textarea:focus { border-color: #58d7ae; }
+    .form textarea { min-height: 125px; resize: vertical; }
+    .form-status { color: #8ee4c5; font-size: 13px; min-height: 20px; }
+
+    /* Footer */
+    .footer { border-top: 1px solid #29474d; padding: 28px 0; color: #8ca8a2; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+    /* Light Theme */
+    .light { --site-background: #f4faf8; --site-on-background: #123036; color-scheme: light; }
+    .light .topbar { background: rgba(244, 250, 248, 0.92); border-color: #d6e6e1; }
+    .light .navlinks, .light .social, .light .muted { color: #496a67; }
+    .light .panel, .light .skill-card, .light .project-card, .light .interest-card, .light .timeline-card, .light .fact, .light .science-card, .light .floating { background: #fff; border-color: #d5e5df; color: #183a3b; }
+    .light .panel p, .light .project-card p, .light .timeline-card p { color: #4f6c68; }
+    .light .btn.ghost, .light .iconlink { background: #fff; color: #193d3b; border-color: #c8ded7; }
+    .light .tag { background: #f0faf6; color: #28554d; border-color: #c8e2d8; }
+    .light .form input, .light .form textarea { background: #fff; color: #173b3a; border-color: #c8ded7; }
+    .light .contact-links a { border-color: #d1e4dc; color: #244b47; }
+    .light .hero:before { opacity: 0.35; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 900px) {
+      .navlinks { display: none; position: absolute; top: 76px; left: 0; right: 0; background: #0b2026; border-bottom: 1px solid #315159; padding: 18px 24px; flex-direction: column; align-items: flex-start; }
+      .navlinks.open { display: flex; }
+      .menu-btn { display: block; }
+      .navright .iconlink { display: none; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 70px; }
+      .visual { min-height: 360px; }
+      .grid3 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .hero { padding: 58px 0; }
+      .hero h1 { font-size: 44px; }
+      .lead { font-size: 16px; }
+      .visual { transform: scale(0.9); margin: -12px 0; }
+      .section { padding: 62px 0; }
+      .grid3 { grid-template-columns: 1fr; }
+      .section-head { margin-bottom: 25px; }
+      .floating.one { right: -12px; }
+      .floating.two { left: -12px; }
+      .nav { height: 68px; }
+      .navlinks { top: 68px; }
+      .brand { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+<div class="root" id="siteRoot">
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="brandmark">AJ</span>
+        <span>Adarsh Kumar Jha</span>
+      </a>
+      <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#interests">Research Interests</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="navright">
+        <a class="iconlink" href="https://github.com/adarsh-jha-99" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <button class="iconlink theme-toggle" id="themeToggle" aria-label="Toggle theme">◐ Theme</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> B.Tech Biotechnology · Student Portfolio</div>
+          <h1>Exploring Life Through <span>Biotechnology</span> &amp; Innovation.</h1>
+          <p class="lead">I’m Adarsh Kumar Jha, a biotechnology student at Lovely Professional University, curious about biological systems and how science and technology can work together to solve real-world challenges.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Explore Projects <span>↗</span></a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+          <div class="social">
+            <a href="https://github.com/adarsh-jha-99" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="mailto:Adarsh.kr.jha.official@gmail.com">Email ↗</a>
+            <a href="#education">Education ↓</a>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="DNA Illustration">
+          <div class="orbit"></div>
+          <div class="orbit two"></div>
+          <div class="science-card">
+            <div class="card-top"><span>Life sciences</span><span>01 / DNA</span></div>
+            <div class="molecule">
+              <div class="helix">
+                <div class="strand"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+                <div class="strand second"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+                <i class="rung"></i><i class="rung"></i><i class="rung"></i><i class="rung"></i><i class="rung"></i><i class="rung"></i>
+              </div>
+            </div>
+            <div class="card-foot"><span>Biology × Technology</span><span>↗ Explore</span></div>
+          </div>
+          <div class="floating one">⌬ Molecular biology</div>
+          <div class="floating two">✳ Curiosity → Discovery</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">01 / About me</div>
+          <h2>Curious about the science of living systems.</h2>
+          <p class="muted">A growing foundation in biotechnology, guided by curiosity, consistency, and a willingness to learn.</p>
+        </div>
+        <div class="about-grid">
+          <div class="panel">
+            <p>I am pursuing a B.Tech in Biotechnology at Lovely Professional University. I’m interested in understanding how cells, genes, and biological processes work—and how biotechnology can support research, sustainability, and innovation. I’m building my academic foundation step by step and hope to explore molecular biology, genetic engineering, and bioinformatics more deeply as I progress through my degree.</p>
+            <p style="margin-top:16px">This portfolio will grow alongside my learning journey, with genuine projects, practical experience, and certificates added as they become available.</p>
+          </div>
+          <div class="facts">
+            <div class="fact">
+              <div class="fact-icon">⌂</div>
+              <div><small>University</small><strong>Lovely Professional University</strong></div>
+            </div>
+            <div class="fact">
+              <div class="fact-icon">⌬</div>
+              <div><small>Degree</small><strong>B.Tech Biotechnology</strong></div>
+            </div>
+            <div class="fact">
+              <div class="fact-icon">◎</div>
+              <div><small>Current focus</small><strong>Learning &amp; exploration</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">02 / Skills</div>
+          <h2>Building a scientific toolkit.</h2>
+          <p class="muted">These are learning areas to update as you study and practice.</p>
+        </div>
+        <div class="grid3">
+          <article class="skill-card">
+            <h3>Biological Sciences</h3>
+            <div class="skill-list">
+              <span class="tag">Cell Biology</span>
+              <span class="tag">Genetics</span>
+              <span class="tag">Molecular Biology</span>
+              <span class="tag">Microbiology</span>
+              <span class="tag">Biochemistry</span>
+            </div>
+            <div class="skill-note">Core theoretical &amp; laboratory foundations</div>
+          </article>
+          <article class="skill-card">
+            <h3>Computational Biology</h3>
+            <div class="skill-list">
+              <span class="tag">Bioinformatics</span>
+              <span class="tag">Sequence Concepts</span>
+              <span class="tag">Biological Data</span>
+              <span class="tag">Computational Tools</span>
+            </div>
+            <div class="skill-note">Exploring data-driven biology</div>
+          </article>
+          <article class="skill-card">
+            <h3>Technical Foundations</h3>
+            <div class="skill-list">
+              <span class="tag">Python</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Scientific Writing</span>
+            </div>
+            <div class="skill-note">Tools for analysis and research</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">03 / Projects</div>
+          <h2>Projects will tell the story.</h2>
+          <p class="muted">Upcoming projects and ongoing research concepts.</p>
+        </div>
+        <div class="grid3">
+          <article class="project-card">
+            <div class="number">PROJECT IDEA / 01</div>
+            <h3>DNA Sequence Exploration</h3>
+            <p>A beginner project to learn how DNA sequences are represented and compare simple sequence properties.</p>
+            <span class="tag" style="align-self:flex-start; margin-bottom:18px;">Planned idea</span>
+            <a class="btn ghost" href="https://github.com/adarsh-jha-99" target="_blank" rel="noreferrer">View GitHub ↗</a>
+          </article>
+          <article class="project-card">
+            <div class="number">PROJECT IDEA / 02</div>
+            <h3>Biotechnology Literature Review</h3>
+            <p>A structured summary of published research on a biotechnology topic, with properly cited sources and key takeaways.</p>
+            <span class="tag" style="align-self:flex-start; margin-bottom:18px;">Planned idea</span>
+            <a class="btn ghost" href="https://github.com/adarsh-jha-99" target="_blank" rel="noreferrer">View GitHub ↗</a>
+          </article>
+          <article class="project-card">
+            <div class="number">PROJECT IDEA / 03</div>
+            <h3>Biological Data Visualization</h3>
+            <p>A beginner-friendly data visualization project using a suitable public dataset and clear documentation.</p>
+            <span class="tag" style="align-self:flex-start; margin-bottom:18px;">Planned idea</span>
+            <a class="btn ghost" href="https://github.com/adarsh-jha-99" target="_blank" rel="noreferrer">View GitHub ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="section" id="interests">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">04 / Research interests</div>
+          <h2>Questions worth exploring.</h2>
+          <p class="muted">Areas of keen academic curiosity.</p>
+        </div>
+        <div class="interests">
+          <article class="interest-card">
+            <span>⌬</span>
+            <h3>Molecular Biology</h3>
+            <p class="muted">Understanding molecules and mechanisms inside cells.</p>
+          </article>
+          <article class="interest-card">
+            <span>⟡</span>
+            <h3>Genetic Engineering</h3>
+            <p class="muted">Learning how genetic material can be studied and modified.</p>
+          </article>
+          <article class="interest-card">
+            <span>⌘</span>
+            <h3>Bioinformatics</h3>
+            <p class="muted">Connecting biological questions with computational tools.</p>
+          </article>
+          <article class="interest-card">
+            <span>✳</span>
+            <h3>Genomics</h3>
+            <p class="muted">Exploring genomes and biological information.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">05 / Education</div>
+          <h2>The academic foundation.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="kicker">Current education</div>
+            <h3>B.Tech Biotechnology</h3>
+            <p><strong>Lovely Professional University</strong></p>
+            <p>Focusing on molecular sciences, bioinformatics, genetics, and biochemical engineering fundamentals.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">06 / Experience</div>
+          <h2>Learning in progress.</h2>
+        </div>
+        <div class="empty-state">Currently building scientific foundation through university coursework, lab sessions, and independent learning. Laboratory practicals, workshops, and internships will be listed here.</div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">07 / Certifications</div>
+          <h2>Credentials &amp; Coursework.</h2>
+        </div>
+        <div class="empty-state">Certificates and workshops completed in biotechnology, Python, or computational tools will be updated here with verification details.</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">08 / Contact</div>
+          <h2>Let’s connect and exchange ideas.</h2>
+          <p class="muted">Open for discussions, learning opportunities, and collaborations.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="panel">
+            <h3 style="margin-top:0">Contact details</h3>
+            <p class="muted">The easiest way to reach me is by email or GitHub.</p>
+            <div class="contact-links">
+              <a href="mailto:Adarsh.kr.jha.official@gmail.com">✉ &nbsp; Adarsh.kr.jha.official@gmail.com</a>
+              <a href="https://github.com/adarsh-jha-99" target="_blank" rel="noreferrer">⌘ &nbsp; github.com/adarsh-jha-99 ↗</a>
+              <a href="tel:+918252214158">☎ &nbsp; +91 82522 14158</a>
+            </div>
+          </div>
+          <div class="panel">
+            <form class="form" id="contactForm">
+              <label>Your name<input name="name" required maxlength="100" placeholder="Enter your name"></label>
+              <label>Your email<input name="email" type="email" required maxlength="200" placeholder="you@example.com"></label>
+              <label>Subject<input name="subject" required maxlength="150" placeholder="What would you like to discuss?"></label>
+              <label>Message<textarea name="message" required maxlength="3000" placeholder="Write your message..."></textarea></label>
+              <button class="btn primary" type="submit">Prepare email ↗</button>
+              <div class="form-status" id="formStatus" role="status" aria-live="polite">This will launch your email client with your message filled in.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Adarsh Kumar Jha · B.Tech Biotechnology</span>
+      <span>Built with curiosity for science, life, and discovery.</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Theme Toggle
+  const root = document.getElementById('siteRoot');
+  const themeToggle = document.getElementById('themeToggle');
+  themeToggle.addEventListener('click', () => {
+    root.classList.toggle('light');
+    themeToggle.textContent = root.classList.contains('light') ? '☾ Dark' : '◐ Theme';
+  });
+
+  // Mobile Menu Toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const navlinks = document.getElementById('navlinks');
+  menuBtn.addEventListener('click', () => {
+    const open = navlinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? '✕' : '☰';
+  });
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navlinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.textContent = '☰';
+  }));
+
+  // Auto Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact Form Mailto Handler
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.currentTarget);
+    const email = 'Adarsh.kr.jha.official@gmail.com';
+    const subject = String(f.get('subject') || 'Portfolio Enquiry');
+    const body = `Name: ${f.get('name')}\nEmail: ${f.get('email')}\n\n${f.get('message')}`;
+    document.getElementById('formStatus').textContent = 'Opening your email client...';
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+</script>
+</body>
+</html>
